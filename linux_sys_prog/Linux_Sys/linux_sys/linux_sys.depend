@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1609869302 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.c
+	"Linux_Sys_Header.h"
+
+1609867446 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Linux_Sys_Header.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/stat.h>
+	<sys/types.h>
+	<fcntl.h>
+	<time.h>
+	<errno.h>
+	<unistd.h>
+	"file_io.h"
+
+1609869302 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.h
+
+1609869310 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/main.c
+	"Linux_Sys_Header.h"
+
