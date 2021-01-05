@@ -40,7 +40,7 @@ void file_read(int fd,char* file_name)
 	int readn=0;
 	int buf;
 	fd=open(file_name,O_RDONLY);
-
+	// file buf 만큼 생성하여 read
 	while( (readn=read(fd,(void *)&buf,sizeof(buf)))>0)
 	{
 		printf("Read Data : %d\n", buf);
