@@ -47,9 +47,10 @@ void file_read(int fd,char* file_name)
 	}
 }
 
-void file_release(int fd)
+void file_release(int fd,char *file_name)
 {
 	close(fd);
+	remove(file_name);
 }
 
 
@@ -64,5 +65,5 @@ void main(int argc, char *argv[])
 	file_open(fd,argv[1]);
 	file_write(fd,argv[1]);
 	file_read(fd,argv[1]);
-	file_release(fd);
+	file_release(fd,argv[1]);
 }
