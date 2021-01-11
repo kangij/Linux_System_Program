@@ -1,21 +1,107 @@
 # depslib dependency file v1.0
-1609869302 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.c
+1609993283 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.c
 	"Linux_Sys_Header.h"
 
-1609867446 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Linux_Sys_Header.h
+1610378406 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Linux_Sys_Header.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<sys/stat.h>
 	<sys/types.h>
+	<sys/time.h>
 	<fcntl.h>
 	<time.h>
 	<errno.h>
 	<unistd.h>
+	<sys/select.h>
+	<sys/poll.h>
 	"file_io.h"
+	"multiplexed_io.h"
+	"User_file_io.h"
+	"Serial.h"
+	"file_stream.h"
 
-1609869302 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.h
+1609985120 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.h
 
-1609869310 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/main.c
+1610383532 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/main.c
+	"Linux_Sys_Header.h"
+
+1609993283 source:/media/kang/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.c
+	"Linux_Sys_Header.h"
+
+1610176771 /media/kang/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Linux_Sys_Header.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/stat.h>
+	<sys/types.h>
+	<sys/time.h>
+	<fcntl.h>
+	<time.h>
+	<errno.h>
+	<unistd.h>
+	<sys/select.h>
+	<sys/poll.h>
+	"file_io.h"
+	"multiplexed_io.h"
+	"User_file_io.h"
+	"Serial.h"
+
+1609985120 /media/kang/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.h
+
+1610172897 source:/media/kang/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/main.c
+	"Linux_Sys_Header.h"
+
+1609983570 /media/kang/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/User_file_io.h
+
+1609984226 source:/media/kang/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/User_file_io.c
+	"Linux_Sys_Header.h"
+
+1610172897 /media/kang/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/multiplexed_io.h
+
+1610176771 source:/media/kang/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/multiplexed_io.c
+	"Linux_Sys_Header.h"
+
+1610207809 /media/kang/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Serial.h
+	<stdio.h>
+	<string.h>
+	<unistd.h>
+	<fcntl.h>
+	<errno.h>
+	<termios.h>
+	<sys/types.h>
+	<sys/poll.h>
+	<sys/select.h>
+	<sys/types.h>
+
+1610172897 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/multiplexed_io.h
+
+1609983570 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/User_file_io.h
+
+1610378928 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Serial.h
+	<stdio.h>
+	<string.h>
+	<unistd.h>
+	<fcntl.h>
+	<errno.h>
+	<termios.h>
+	<sys/types.h>
+	<sys/poll.h>
+	<sys/select.h>
+	<sys/types.h>
+
+1610176771 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/multiplexed_io.c
+	"Linux_Sys_Header.h"
+
+1610378572 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/User_file_io.c
+	"Linux_Sys_Header.h"
+
+1610383518 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_stream.h
+
+1610384599 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_stream.c
+	"Linux_Sys_Header.h"
+	<stdio.h>
+
+1610381127 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Serial.c
 	"Linux_Sys_Header.h"
 
