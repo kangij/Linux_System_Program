@@ -32,18 +32,23 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="Linux_Sys_Header.h" />
+		<Unit filename="Scatter_Gather.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Scatter_gather.h" />
 		<Unit filename="Serial.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Serial.h" />
-		<Unit filename="User_file_io.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="User_file_io.h" />
 		<Unit filename="file_io.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="file_io.h" />
+		<Unit filename="file_stream.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="file_stream.h" />
 		<Unit filename="linux_sys.depend" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />

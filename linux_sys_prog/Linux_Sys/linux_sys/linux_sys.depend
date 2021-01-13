@@ -2,7 +2,7 @@
 1609993283 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.c
 	"Linux_Sys_Header.h"
 
-1610378406 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Linux_Sys_Header.h
+1610467263 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Linux_Sys_Header.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -20,10 +20,11 @@
 	"User_file_io.h"
 	"Serial.h"
 	"file_stream.h"
+	"Scatter_gather.h"
 
 1609985120 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.h
 
-1610383532 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/main.c
+1610555369 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/main.c
 	"Linux_Sys_Header.h"
 
 1609993283 source:/media/kang/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.c
@@ -74,7 +75,10 @@
 	<sys/select.h>
 	<sys/types.h>
 
-1610172897 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/multiplexed_io.h
+1610555369 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/multiplexed_io.h
+	<stdio.h>
+	<unistd.h>
+	<sys/epoll.h>
 
 1609983570 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/User_file_io.h
 
@@ -90,18 +94,32 @@
 	<sys/select.h>
 	<sys/types.h>
 
-1610176771 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/multiplexed_io.c
+1610555320 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/multiplexed_io.c
 	"Linux_Sys_Header.h"
+	<sys/sys/epoll.h>
 
 1610378572 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/User_file_io.c
 	"Linux_Sys_Header.h"
 
-1610383518 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_stream.h
+1610465125 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_stream.h
+	<stdio.h>
+	<limits.h>
 
-1610384599 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_stream.c
+1610467263 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_stream.c
 	"Linux_Sys_Header.h"
 	<stdio.h>
 
 1610381127 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Serial.c
+	"Linux_Sys_Header.h"
+
+1610467575 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Scatter_gather.h
+	<stdio.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<string.h>
+	<sys/uio.h>
+
+1610553382 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Scatter_Gather.c
 	"Linux_Sys_Header.h"
 

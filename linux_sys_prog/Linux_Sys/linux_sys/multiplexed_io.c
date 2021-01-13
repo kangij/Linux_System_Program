@@ -211,3 +211,145 @@ int poll_ex(int fd)
    return 0;
 }
 
+
+////////////////// Epoll
+/*
+    Linux 2.6에서 시작된 전용 Multiflex 방식이다.
+    poll과 select의 제약사항을 해결하였으나 사용방식이 복잡하다.
+
+    #include <sys/sys/epoll.h>
+    int epoll create ( int size ) // 감시할 fd 개수
+    int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event);
+
+    struct epoll_event{
+    __u32 evnets;
+    int fd;
+    __u32 u32;
+    __u64 u64;
+    } data;
+    }
+
+    ex)
+        struct eopll_event event;
+        int ret;
+        event.data.fd = fd // return fd 설정
+        event.events = EPOLLIN / EPOLLOUT ( or 가능 )
+        ret = epoll_ctl( epfd , EPOLL_CTL_ADD / EPOLL_CTL_MOD / EPOLL_CTL_DEL, fd, &evnet )
+          -> EPOLL_CTL_ADD ( 추가 ), EPOLL_CTL_MOD ( epfd에서 인스턴스로 fd로 변경 ), EPOLLOUT(epfd에서 fd목록을 삭제)
+*/
+
+#define MAX_EVENTS 16
+
+void epoll_Task(void)
+{
+    int epfd, fd;
+    struct epoll_event *event; // epoll event 생성
+    int ret, nr_events, i;
+
+    if( (epfd = epoll_create(10)) == -1 ) // 10개의 epoll을 받을 수 있도록 생성한다.
+    {
+        printf("\r\n  epoll create fail..");
+        return -1;
+    }
+
+    fd=STDIN_FILENO; // file input
+
+    struct epoll_event event1;
+    event1.data.fd=fd;
+    event1.events=EPOLLIN;
+
+    // 입력되는 내용을 감지한다.
+    if( (ret=epoll_ctl(epfd,EPOLL_CTL_ADD,fd,&event1))==-1)
+    {
+        printf("\r\n epoll_ctl ADD err");
+        return -1;
+    }
+#if 0
+    // 화면에 출력되는 내용을 감지한다.
+    fd=STDOUT_FILENO; // STD Out
+
+    event1.data.fd=fd;
+    event1.events=EPOLLOUT;
+
+
+    if( (ret=epoll_ctl(epfd,EPOLL_CTL_ADD,fd,&event1))==-1)
+    {
+        printf("\r\n epoll_ctl ADD1 err");
+        return -1;
+    }
+#endif
+
+    // event에 event를 Heap으로 생성한다.
+    if((event=malloc(sizeof(struct epoll_event)*MAX_EVENTS))==-1)
+    {
+        printf("\r\n molloc errr");
+        free(event);
+        return -1;
+    }
+
+    // Event가 발생할 때 까지 (-1) 대기한다.
+    if((nr_events=epoll_wait(epfd,event,MAX_EVENTS,-1))<0)
+    {
+        printf("\r\n epoll_wait() err");
+        return -1;
+    }
+
+/*
+    for(i=0;i<nr_events;i++)
+    {
+        printf("\r\n events[%d]=%ld on fd = %d \n",i,event[i].events,event[i].data.fd);
+        ret = write(STDOUT_FILENO, buf,len);
+        if(ret==-1)
+        {
+            printf("\r\n write() : error \n");
+            return 1;
+        }
+    }
+*/
+    struct evepoll *evep; // vread /vwrite에 대한 struct가 묶여있는 스크립터
+
+    for(i=0;i<nr_events;i++)
+    {
+        int what= event[i].events; // 현재 이벤트를 확인한다.
+        struct event *evread = NULL, *evwrite=NULL;
+
+        evep=(struct evepoll *)event[i].data.ptr; // event의 ptr를 체크한다.
+
+        // 감지 되고 있는 내용을 확인한다.
+        printf("\r\n events[%d]=%ld on fd=%d\n",i,what,event[i].data.fd);
+
+        // EPOLLHUP : 연결이 종료되거나, 장애가 발생한경우 / EPOLLERR : 동작간 에러가 발생시
+        if(what & (EPOLLHUP | EPOLLERR))
+        {
+            printf("\r\n evread_evwrite()");
+        }
+        else
+        {
+            // 입력 이벤트가 발생했다면
+            if(what & EPOLLIN)
+            {
+                printf("\r\n evread");
+            }
+
+            // 출력 이벤트가 발생했다면.
+            if(what & EPOLLOUT)
+            {
+                printf("evwrite");
+            }
+        }
+
+        if(!(evread || evwrite))
+            continue;
+
+        if(evread!=NULL)
+            printf("\r\n evread!!");
+
+        if(evwrite!=NULL)
+            printf("\r\n evwrite!!");
+
+    }
+    printf("\r\n Page Size[%d]",getpagesize());
+    free(event);
+}
+
+

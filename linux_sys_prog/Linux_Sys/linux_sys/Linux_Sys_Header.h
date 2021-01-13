@@ -25,5 +25,6 @@
 #include "User_file_io.h"
 #include "Serial.h"
 #include "file_stream.h"
+#include "Scatter_gather.h"
 
 #endif // LINUX_SYS_HEADER_H_INCLUDED
