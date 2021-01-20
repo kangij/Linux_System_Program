@@ -20,6 +20,11 @@ int main(int argc,char *argv[])
     //file_stream_ex();
     //file_stream_ex2_task();
     //Scatter_IO();
-    epoll_Task();
+    //epoll_Task();
+    //mmap_test(argv[1],argc);
+    //fork_test();
+    //daemond_ex_test();
+    //signal_ex();
+    th_ex_task();
     return 0;
 }

@@ -26,5 +26,6 @@
 #include "Serial.h"
 #include "file_stream.h"
 #include "Scatter_gather.h"
-
+#include "process.h"
+#include "signal_ex.h"
 #endif // LINUX_SYS_HEADER_H_INCLUDED

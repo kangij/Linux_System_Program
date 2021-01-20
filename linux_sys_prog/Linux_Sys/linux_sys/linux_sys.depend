@@ -2,7 +2,7 @@
 1609993283 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.c
 	"Linux_Sys_Header.h"
 
-1610467263 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Linux_Sys_Header.h
+1610900791 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Linux_Sys_Header.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -21,10 +21,12 @@
 	"Serial.h"
 	"file_stream.h"
 	"Scatter_gather.h"
+	"process.h"
+	"signal_ex.h"
 
 1609985120 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.h
 
-1610555369 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/main.c
+1610902211 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/main.c
 	"Linux_Sys_Header.h"
 
 1609993283 source:/media/kang/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/file_io.c
@@ -94,7 +96,7 @@
 	<sys/select.h>
 	<sys/types.h>
 
-1610555320 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/multiplexed_io.c
+1610558898 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/multiplexed_io.c
 	"Linux_Sys_Header.h"
 	<sys/sys/epoll.h>
 
@@ -122,4 +124,42 @@
 
 1610553382 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/Scatter_Gather.c
 	"Linux_Sys_Header.h"
+
+1610637915 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/mmap_test.c
+
+1610812992 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/mmap_tset.c
+	"Linux_Sys_Header.h"
+	"fcntl.h"
+	"sys/stat.h"
+	"sys/errno.h"
+	"sys/mman.h"
+	<unistd.h>
+
+1610900176 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/process.c
+	"Linux_Sys_Header.h"
+	<unistd.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<sys/wait.h>
+	<linux/fs.h>
+
+1610899137 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/process.h
+
+1610900791 /media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/signal_ex.h
+
+1610902153 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/signal_ex.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<signal.h>
+
+1610903031 source:/media/kang/Kang_Buf/study/git/Linux_System_Program/linux_sys_prog/Linux_Sys/linux_sys/pthread_test.c
+	<pthread.h>
+	<stdio.h>
+	<unistd.h>
+	<stdlib.h>
 
